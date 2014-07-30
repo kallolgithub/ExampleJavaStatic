@@ -14,13 +14,21 @@ public class MyStaticMethods {
 
     public static void testStaticMethod() {
 
+        System.out.println("Hey I am in StaticMethod");
+        System.out.println(MyStaticMethods.staticStr);
     }
 
     public void testObjectMethod() {
 
+        System.out.println("Hey I am in non-static method");
+        System.out.println(MyStaticMethods.staticStr);
+        System.out.println("Name : " + this.name);
     }
 
     public static void main(String args[]) {
 
+        MyStaticMethods.testStaticMethod();
+        MyStaticMethods msm = new MyStaticMethods("kallol");
+        msm.testObjectMethod();
     }
 }
